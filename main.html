@@ -7811,6 +7811,7 @@ Det gøres ved at tage <code>.classes</code>:</p>
 <h1 id="Modelgeneration">Modelgeneration<a class="anchor-link" href="#Modelgeneration">¶</a></h1><p>Nu har vi forberedt dataen og kan begynde at genererer modelen.<br/>
 Her starter vi med at bruge VGG19 hvor vi definerer størrelsen på inputtet samt hvilken type vægte vi gerne ville bruge.</p>
 <p>Vi sætter også alle de lag der følger med VGG19 til ikke at skulle trænes da de allerede er fortrænet.</p>
+<p>//TODO: COLOR SPECI PISS</p>
 </div>
 </div>
 </div>
@@ -8090,13 +8091,13 @@ Man kan også se at den ikke er specielt præcis hvilket skyldes manglen på pro
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">'accuracy'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'train acc'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">'val_accuracy'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'val acc'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'vgg-acc-rps-1.png'</span><span class="p">)</span>
+<span class="c1"># plt.savefig('vgg-acc-rps-1.png')</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 <span class="c1"># loss</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">'loss'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'train loss'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">'val_loss'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'val loss'</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'vgg-loss-rps-1.png'</span><span class="p">)</span>
+<span class="c1"># plt.savefig('vgg-loss-rps-1.png')</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -8156,7 +8157,7 @@ Man kan også se at den ikke er specielt præcis hvilket skyldes manglen på pro
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">load_model</span>
 
-<span class="n">model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="s2">"C:</span><span class="se">\\</span><span class="s2">Users\silas\code</span><span class="se">\\</span><span class="s2">frugt_genkendelse</span><span class="se">\\</span><span class="s2">model.keras"</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="s2">"model.keras"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8334,9 +8335,6 @@ Mango
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre><span class="ansi-bold">1/1</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">0s</span> 135ms/step
-[[1.599382e-20 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00]]
-Banana
-<span class="ansi-bold">1/1</span> <span class="ansi-green-fg">━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-bold">0s</span> 135ms/step
 [[1.599382e-20 0.000000e+00 0.000000e+00 1.000000e+00 0.000000e+00]]
 Banana
 </pre>
